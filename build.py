@@ -17,6 +17,7 @@ DRAFTS = ROOT / "drafts"  # local only, listed in .gitignore
 FACTS = json.loads((ROOT / "facts.json").read_text())
 NAV = [("release", "ReLease"), ("reqest", "Reqest"), ("about", "About")]
 MAX_WORDS = 400
+SITE = "https://matthewgodinez24-boop.github.io/"  # used in link-preview tags
 TOKEN = re.compile(r"\{\{(\w+)(:date)?\}\}")
 LINK = re.compile(r"\[([^\]]+)\]\(([^)\s]+)\)")
 problems = []
@@ -28,7 +29,7 @@ BANNED = (
 )
 
 
-def inline(text, where):
+def fill(text, where):
     def fact(m):
         entry = FACTS.get(m.group(1))
         if not isinstance(entry, dict):
@@ -41,7 +42,11 @@ def inline(text, where):
             return m.group(0)
         return date.fromisoformat(entry["measured"]).strftime("%b %-d, %Y")
 
-    return LINK.sub(r'<a href="\2">\1</a>', html.escape(TOKEN.sub(fact, text), quote=False))
+    return TOKEN.sub(fact, text)
+
+
+def inline(text, where):
+    return LINK.sub(r'<a href="\2">\1</a>', html.escape(fill(text, where), quote=False))
 
 
 def render(body, where):
@@ -107,7 +112,9 @@ def build(src, out_dir, draft):
     if count > MAX_WORDS:
         problems.append(f"{where}: {count} words, the limit is {MAX_WORDS}")
 
-    title = meta["title"] if slug == "index" else f"{meta['title']} · Mathew Godinez"
+    title = html.escape(meta["title"] if slug == "index" else f"{meta['title']} · Mathew Godinez")
+    description = html.escape(fill(meta.get("description", ""), where))
+    url = SITE if slug == "index" else f"{SITE}{slug}.html"
     nav = "\n".join(
         f'<a href="{up}{s}.html"{" aria-current=page" if s == slug else ""}>{label}</a>' for s, label in NAV
     )
@@ -117,8 +124,13 @@ def build(src, out_dir, draft):
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{html.escape(title)}</title>
-<meta name="description" content="{html.escape(meta.get('description', ''))}">
+<title>{title}</title>
+<meta name="description" content="{description}">
+<meta property="og:type" content="website">
+<meta property="og:title" content="{title}">
+<meta property="og:description" content="{description}">
+<meta property="og:url" content="{url}">
+<meta name="twitter:card" content="summary">
 <link rel="stylesheet" href="{up}style.css">
 </head>
 <body class="{slug}">

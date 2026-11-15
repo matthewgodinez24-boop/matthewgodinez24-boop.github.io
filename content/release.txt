@@ -1,7 +1,7 @@
 title: ReLease
 description: Case study. ReLease, a two-sided review marketplace built and launched solo by Mathew Godinez.
 ---
-# A live review marketplace with {{release_addresses}} addresses on file, built and launched solo (as of {{release_addresses:date}})
+# A live review marketplace, built and launched solo. First outreach batch: {{release_outreach_sent}} sent, {{release_outreach_replied}} replied, {{release_outreach_posted}} posted (as of {{release_outreach_sent:date}}).
 
 ## What it is and my role
 ReLease is a two-sided marketplace where verified renters review their landlords. It is live at [joinrelease.com](https://joinrelease.com).
@@ -15,8 +15,9 @@ A review marketplace launches with zero supply. The incumbent, och.berkeley.edu,
 1. Ran a competitive teardown of CoStar's och.berkeley.edu and found it cannot carry reviews.
 2. Built and launched the product: an address directory with reviews from renters who verify their email.
 3. Ran one outreach batch to seed reviews.
-4. Audited production read-only instead of trusting my own status document. The audit overturned an earlier all-clear, so I paused seeding until it was fixed.
-5. Diagnosed a {{release_spam_signups}}-signup surge as form spam instead of reporting it as growth, and shipped double opt-in. (My own account as of {{release_spam_signups:date}}, not re-measured.)
+4. Audited production read-only instead of trusting my own status document. The audit overturned an earlier all-clear: ten 'reviews' were QA data and the takedown contact was unset, so I paused seeding until both were fixed.
+5. Diagnosed a {{release_spam_signups}}-signup surge in three days as form spam (dot-injected Gmail addresses, out-of-state ISPs) instead of reporting it as growth, and shipped double opt-in. (My own account as of {{release_spam_signups:date}}, not re-measured.)
+6. Priced, then killed, my own recommendation (LRS certification, parked three weeks after I proposed it), and rejected my own idea of memes as a format on evidence.
 
 ## Results
 - {{release_addresses}} addresses and {{release_landlords}} landlords on file (as of {{release_addresses:date}}).

@@ -31,6 +31,11 @@
     "measured": "2026-07-14",
     "ledger": "ReLease, safe to say: outreach run to date, posted"
   },
+  "release_started": {
+    "value": "June 2026",
+    "measured": "2026-09-19",
+    "ledger": "Mathew-attested additions 2026-09-19: Start months, ReLease June 2026"
+  },
   "release_spam_signups": {
     "value": "17",
     "measured": "2026-09-19",

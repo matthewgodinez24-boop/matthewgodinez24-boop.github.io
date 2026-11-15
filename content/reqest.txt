@@ -24,7 +24,7 @@ The report and the re-score are my own account as of {{reqest_report:date}}, not
 - Requests that have gone through the system: {{reqest_requests}} (as of {{reqest_requests:date}}).
 
 ## What went wrong
-My own research report returned a failing verdict against the criteria I set. As of {{reqest_requests:date}}, no request had gone through the system. I under-invested in distribution and over-invested in the build. What I would do differently is set the supply target before the build target, not after.
+My own research report returned a failing verdict against the criteria I set. As of {{reqest_requests:date}}, no request had gone through the system. I under-invested in distribution and over-invested in the build.
 
 ## Links
 - Live product: [reqest.app](https://reqest.app)
