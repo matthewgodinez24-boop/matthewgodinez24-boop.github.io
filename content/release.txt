@@ -1,31 +1,30 @@
-title: ReLease
-description: Case study. ReLease, a two-sided review marketplace built and launched solo by Mathew Godinez.
+title: ReLease · Outreach and measurement
+description: How Mathew Godinez targeted a first warm-DM outreach batch for ReLease. Prepared message excerpt and a dated, small-sample funnel.
 ---
-# A live review marketplace, built and launched solo. First outreach batch: {{release_outreach_sent}} sent, {{release_outreach_replied}} replied, {{release_outreach_posted}} posted (as of {{release_outreach_sent:date}}).
+# ReLease: testing the first outreach
 
-## What it is and my role
-ReLease is a two-sided marketplace where verified renters review their landlords. It is live at [joinrelease.com](https://joinrelease.com).
+{{release_outreach_sent}} warm DMs sent. {{release_outreach_replied}} replies. {{release_outreach_posted}} marked posted. One batch, {{release_outreach_sent:date}}.
 
-I am the sole founder and operator. I built and launched it solo, end to end. Nobody else worked on it.
+Sole founder and operator · Positioning, outreach and AI-assisted product building.
 
-## The problem
-A review marketplace launches with zero supply. The incumbent, och.berkeley.edu, is operated by CoStar and cannot carry reviews.
+ReLease helps Berkeley renters research a home before signing: public housing records plus reviews from renters who verify their email. [Visit ReLease](https://joinrelease.com).
 
-## What I did
-1. Ran a competitive teardown of CoStar's och.berkeley.edu and found it cannot carry reviews.
-2. Built and launched the product: an address directory with reviews from renters who verify their email.
-3. Ran one outreach batch to seed reviews.
-4. Audited production read-only instead of trusting my own status document. The audit overturned an earlier all-clear: ten 'reviews' were QA data and the takedown contact was unset, so I paused seeding until both were fixed.
-5. Diagnosed a {{release_spam_signups}}-signup surge in three days as form spam (dot-injected Gmail addresses, out-of-state ISPs) instead of reporting it as growth, and shipped double opt-in. (My own account as of {{release_spam_signups:date}}, not re-measured.)
-6. Priced, then killed, my own recommendation (LRS certification, parked three weeks after I proposed it), and rejected my own idea of memes as a format on evidence.
+## The audience and the ask
+A new review marketplace needs useful coverage before renters have a reason to return. I concentrated outreach around a specific property manager, asking renters in my warm network to describe their experience. The first logged batch targeted Premium Properties.
 
-## Results
-- {{release_addresses}} addresses and {{release_landlords}} landlords on file (as of {{release_addresses:date}}).
-- Email verification completion: {{release_verify}} (as of {{release_verify:date}}).
-- Outreach: {{release_outreach_sent}} sent, {{release_outreach_replied}} replied, {{release_outreach_posted}} posted, from one batch (as of {{release_outreach_sent:date}}).
+The outreach kit calls for a direct link to the renter’s building or manager. The goal is a relevant review on that page, not an undirected homepage visit.
 
-## What went wrong
-ReLease is live, but I under-invested in distribution and over-invested in the build. What I would do differently is set the supply target before the build target, not after.
+## Inspect the message
+@quote {"text":"…Trying to make it useful before fall housing. You rented from [manager]. Would you say what happened? About a minute, and it's the thing the next tenant reads before they sign. Here's the page for [building/manager]: [deep link].…","caption":"Excerpt from my prepared warm-DM template. This is not a recovered sent message; retired verification wording is omitted. [Source note (TXT)](assets/work/release-outreach.txt)."}
 
-## Links
-- Live product: [joinrelease.com](https://joinrelease.com)
+## What the batch recorded
+@table {"caption":"Original outreach log, {{release_outreach_sent:date}}. Warm DM, Premium. Denominator: {{release_outreach_sent}} messages.","headers":["Sent","Replied","Marked posted"],"rows":[["{{release_outreach_sent}}","{{release_outreach_replied}}","{{release_outreach_posted}}"]]}
+
+“Posted” is the tracker’s review-posting status; I have not matched those entries to individual approved reviews. This small historical batch does not establish repeatable acquisition. [Original log transcription (TXT)](assets/work/release-batch.txt).
+
+## What changed after the test
+I kept distribution focused on renter networks and individual building pages. I also separated product QA and spam from acquisition reporting: a production check prompted a pause to remove test reviews, and a later signup-spam diagnosis led to double opt-in.
+
+Next measurement: retain the sent wording and connect outreach records to approved reviews, so the full path can be checked. No current total-review claim is made here.
+
+[Email me about growth/GTM work](mailto:{{public_email}}) · [Next: outreach workflow](reqest.html#outreach-workflow)

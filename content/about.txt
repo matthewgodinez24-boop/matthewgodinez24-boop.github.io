@@ -1,18 +1,27 @@
 title: About
-description: About Mathew Godinez, founder of ReLease and Reqest.
+description: Mathew Godinez, UC Berkeley Cognitive Science student and founder of ReLease and Reqest. Available {{available_from}} for growth and GTM roles.
 ---
 # About
 
-I'm Mathew Godinez, founder of [ReLease](release.html) and [Reqest](reqest.html).
+I’m Mathew Godinez, a UC Berkeley Cognitive Science student and founder of [ReLease](release.html) and [Reqest](reqest.html). I’m pursuing entry-level growth and go-to-market roles, with Product/APM as a secondary path.
 
-Available {{available_from}}, remote or Europe-based roles.
+B.A. Cognitive Science, expected {{graduation}} · Available {{available_from}}.
+
+## How I work
+I start with the audience and the workflow: who needs the product, what stops them and what would count as progress. I use AI coding tools to turn requirements into software, then check the full user journey and distinguish recorded outcomes from assumptions.
+
+## Anre AI
+Head of Finance and Project Manager since {{anre_started}}. I lead a {{reqest_team}}-person cross-functional Reqest project team including {{reqest_engineers}} engineers, setting priorities and coordinating work. Team composition confirmed {{reqest_team:date}}.
 
 ## CalSol
-- Electrical team, {{calsol_electrical}}.
-- Business and Operations team (corporate relations and fundraising), since {{calsol_bizops_since}}.
+Business and Operations (corporate relations and fundraising) since {{calsol_bizops_since}}; previously on the electrical team, {{calsol_electrical}}.
+
+CalSol has submitted real purchase requests through Reqest, according to my {{reqest_usage:date}} update. My role on CalSol is part of that context.
 
 ## Auxilium Aliis
-{{auxilium_portfolio}} commercial real estate portfolio.
+Operations Intern · {{auxilium_dates}}.
 
-## Find me
-[LinkedIn](https://www.linkedin.com/in/mathew-godinez-3935731b0)
+Supported property financial statements and owner/investor reporting for a firm with a {{auxilium_portfolio}} commercial real estate portfolio. That figure describes the firm’s portfolio, not assets I personally managed.
+
+## Get in touch
+@links [{"label":"Email me","url":"mailto:{{public_email}}"},{"label":"LinkedIn","url":"{{linkedin}}"},{"label":"Growth/GTM resume (PDF)","url":"assets/Mathew-Godinez-Growth-GTM.pdf"},{"label":"Product resume (PDF)","url":"assets/Mathew-Godinez-Product.pdf"}]

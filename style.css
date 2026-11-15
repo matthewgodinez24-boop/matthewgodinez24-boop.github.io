@@ -5,11 +5,20 @@
   --card: #ffffff;
   --line: #e3dfd6;
   --accent: #0d5c4b;
+  --selection: #dcebe4;
+  --warning: #a33a1e;
 }
 
 * { box-sizing: border-box; }
 
 html { -webkit-text-size-adjust: 100%; }
+
+::selection { color: var(--ink); background: var(--selection); }
+
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+
+.skip { position: absolute; left: 1rem; top: -8rem; padding: 0.75rem; background: var(--paper); }
+.skip:focus { top: 0.5rem; }
 
 body {
   margin: 0;
@@ -69,6 +78,25 @@ ul, ol { padding-left: 1.4rem; }
 li { margin-bottom: 0.4rem; }
 
 a { color: var(--accent); text-underline-offset: 0.15em; overflow-wrap: anywhere; }
+a:hover { text-decoration-thickness: 2px; }
+
+.actions { display: flex; flex-wrap: wrap; gap: 0.25rem 1.25rem; margin: 1.25rem 0 1.75rem; }
+.actions a { display: inline-flex; align-items: center; min-height: 44px; }
+
+section { scroll-margin-top: 1.25rem; }
+figure { margin: 1.25rem 0 1.5rem; }
+figcaption, caption { color: var(--muted); font-size: 0.9rem; line-height: 1.55; text-align: left; }
+figcaption { margin-top: 0.65rem; }
+blockquote { margin: 0; padding: 1.1rem 1.2rem; border: 1px solid var(--line); background: var(--card); }
+blockquote p { margin: 0; }
+.screenshot { max-width: 23rem; margin-inline: auto; }
+.screenshot a { display: block; }
+.screenshot img { display: block; width: 100%; height: auto; aspect-ratio: 358 / 720; object-fit: cover; object-position: bottom; border: 1px solid var(--line); }
+table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+caption { caption-side: bottom; padding-top: 0.65rem; }
+th, td { padding: 0.65rem 0.5rem; text-align: left; border-bottom: 1px solid var(--line); }
+th { font-size: 0.9rem; font-weight: 600; }
+td { font-size: 1.1rem; }
 
 /* Home: each project section is a card */
 .index section {
@@ -85,8 +113,8 @@ a { color: var(--accent); text-underline-offset: 0.15em; overflow-wrap: anywhere
 
 .draft {
   padding: 0.6rem 0.9rem;
-  border: 2px dashed #a33a1e;
-  color: #a33a1e;
+  border: 2px dashed var(--warning);
+  color: var(--warning);
   font-weight: 700;
 }
 
@@ -96,6 +124,7 @@ a { color: var(--accent); text-underline-offset: 0.15em; overflow-wrap: anywhere
   header, main { max-width: none; padding-left: 0; padding-right: 0; }
   header { padding-top: 0; }
   nav { display: none; }
+  .skip { display: none; }
   main { padding-top: 1rem; padding-bottom: 0; }
   h1 { font-size: 1.5rem; margin-bottom: 0.75rem; }
   h2 { margin-top: 1.1rem; }
@@ -105,7 +134,12 @@ a { color: var(--accent); text-underline-offset: 0.15em; overflow-wrap: anywhere
   a[href$=".html"]::after { content: " (matthewgodinez24-boop.github.io/" attr(href) ")"; }
   a::after { font: 400 10pt system-ui, sans-serif; }
   li { margin-bottom: 0.25rem; }
-  section { break-inside: avoid; }
+  figure { break-inside: avoid; }
+  .screenshot { max-width: 11rem; }
+  .screenshot a::after { content: none; }
+  .actions { gap: 0.2rem 0.8rem; margin: 0.5rem 0; }
+  .actions a { min-height: 0; }
+  .index section { break-inside: avoid; }
   h1, h2 { break-after: avoid; }
   .index section { border-color: #999; }
 }

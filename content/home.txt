@@ -1,18 +1,24 @@
-title: Mathew Godinez
-description: Mathew Godinez, founder of ReLease and Reqest. Looking for an entry-level growth marketing or go-to-market role. Available {{available_from}}, remote or Europe-based.
+title: Mathew Godinez · Growth & go-to-market
+description: Growth and go-to-market portfolio: ReLease outreach, a working outreach CRM, and Reqest customer discovery and product delivery. UC Berkeley, available {{available_from}}.
 ---
 # Mathew Godinez
 
-I'm looking for an entry-level growth marketing or go-to-market role.
+Growth & go-to-market
 
-I'm the founder of ReLease and Reqest: I build and launch products, then audit my own results before I report them.
+I build products, run outreach, and turn feedback into what ships next. I’m the founder of ReLease and Reqest, looking for an entry-level growth or GTM role.
 
-Available {{available_from}}, remote or Europe-based roles.
+UC Berkeley · B.A. Cognitive Science, expected {{graduation}} · Available {{available_from}}.
 
-[LinkedIn](https://www.linkedin.com/in/mathew-godinez-3935731b0)
+@links [{"label":"View selected work","url":"#selected-work"},{"label":"Growth/GTM resume (PDF)","url":"assets/Mathew-Godinez-Growth-GTM.pdf"},{"label":"Email me","url":"mailto:{{public_email}}"},{"label":"LinkedIn","url":"{{linkedin}}"}]
 
-## [ReLease](release.html)
-A two-sided review marketplace I started in {{release_started}}, built and launched solo. First outreach batch: {{release_outreach_sent}} sent, {{release_outreach_replied}} replied, {{release_outreach_posted}} posted (as of {{release_outreach_sent:date}}).
+## [ReLease: outreach and measurement](release.html) {#selected-work}
+One warm-DM batch: {{release_outreach_sent}} sent, {{release_outreach_replied}} replied, {{release_outreach_posted}} marked posted ({{release_outreach_sent:date}}). See the targeting, prepared copy and original log’s results.
 
-## [Reqest](reqest.html)
-Founder. {{reqest_calls}} discovery calls with out-of-network student organizations, booked by cold email (as of {{reqest_calls:date}}).
+## [Outreach workflow: GTM systems](reqest.html#outreach-workflow)
+A shared CRM that keeps ownership, conversation status and next actions together. Inspect the real interface with fictional test records and the build-versus-buy decision.
+
+## [Reqest: discovery and delivery](reqest.html)
+{{reqest_calls}} discovery calls booked through cold email. A sign-in problem translated into requirements and shipped behavior. CalSol purchase-request usage attested {{reqest_usage:date}}.
+
+## Also considering Product/APM
+I specify behavior, coordinate delivery and test complete user journeys. [Product resume (PDF)](assets/Mathew-Godinez-Product.pdf) · [More about me](about.html).

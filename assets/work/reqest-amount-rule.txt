@@ -1,0 +1,23 @@
+Reqest | Reimbursement amount-integrity specification excerpt
+
+Historical source: T-001-ch03-amount-integrity.md, acceptance checks AC-1, AC-2 and AC-4; BR-83; September 8, 2026. Inspected from repository main on November 15, 2026.
+
+Problem
+Testing found that an approved reimbursement could be recorded as paid at a different amount. The source's illustrative failure was approval for $300 followed by a $500 recorded payment. Those are test amounts, not a real loss.
+
+Decision
+An approved reimbursement must preserve a single, receipt-backed amount through approval and payment. A legitimate change requires renewed approval, rather than silently accepting whatever amount the payer enters.
+
+Original acceptance excerpt (AC-4)
+“A legitimate amount change is possible through the explicit path and leaves the request back in a state that requires approval, with an audit event carrying the reason (INV-3, BR-43).”
+
+Additional acceptance criteria (condensed)
+- A reimbursement cannot move to PAID at a different amount without an explicit re-approval event.
+- The former approve-$300/pay-$500 test must assert rejection.
+- The separate preapproval flow continues to work.
+
+Contribution
+Mathew directed requirements and AI-assisted delivery with a technical co-founder. The card was drafted by an AI agent from prior audit evidence; implementation and review were separate roles. This is a specification/delivery example, not an external customer interview finding.
+
+Recorded outcome
+PR 52 merged September 8. The task records that its immediate deployment was blocked and the code subsequently went live with PR 50. Its first audit happened after the merge. This is historical delivery evidence, not a new production test or a claim that the present application is defect-free.

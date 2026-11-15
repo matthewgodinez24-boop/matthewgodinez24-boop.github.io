@@ -1,0 +1,100 @@
+[
+  {
+    "name": "Growth-GTM",
+    "focus": "Growth & go-to-market",
+    "summary": "Customer discovery, targeted outreach and practical GTM systems. Founder of ReLease and Reqest, with hands-on experience translating feedback into working products.",
+    "experience": [
+      {
+        "title": "Founder, ReLease",
+        "dates": "{{release_started}} - Present",
+        "subtitle": "Berkeley rental research and review platform | joinrelease.com",
+        "bullets": [
+          "Own positioning, outreach and the product as sole founder/operator; built the live platform with AI coding tools.",
+          "Targeted warm-network renters connected to one property manager. First logged batch: {{release_outreach_sent}} DMs, {{release_outreach_replied}} replies and {{release_outreach_posted}} marked posted on {{release_outreach_sent:date}}; one small batch, with posting status recorded in the outreach tracker.",
+          "Prepared personalized outreach around the renter’s building page and the next tenant’s housing decision; distinguished test data and signup spam from genuine acquisition evidence."
+        ]
+      },
+      {
+        "title": "Creator, Outreach CRM",
+        "dates": "{{crm_started}} - Present",
+        "subtitle": "Shared relationship ownership and follow-up workflow",
+        "bullets": [
+          "Chose a standalone build after a local CRM trial failed {{crm_checks}} collaboration checks: exclusive ownership, stale-edit rejection and immutable draft history.",
+          "Directed the AI-assisted build. Recorded API import: {{crm_teams}} teams and {{crm_contacts}} contacts, {{crm_errors}} errors ({{crm_teams:date}}, prior import-verification record). These are imported records, not customers or sales."
+        ]
+      },
+      {
+        "title": "Founder, Reqest",
+        "dates": "{{reqest_started}} - Present",
+        "subtitle": "Student-organization spending requests, approvals and budgets | reqest.app",
+        "bullets": [
+          "Booked {{reqest_calls}} discovery calls with out-of-network student organizations through cold email ({{reqest_calls:date}}); directed market research and product requirements.",
+          "Built the first version using AI coding agents through {{reqest_solo_through}}, then worked with a technical co-founder. Specified reliable returning-user sign-in while retaining email-code access and existing accounts.",
+          "CalSol has put real purchase requests through the product (my account, {{reqest_usage:date}}; no measured count). I also work on CalSol’s business side."
+        ]
+      },
+      {
+        "title": "Operations Intern, Auxilium Aliis",
+        "dates": "{{auxilium_dates}}",
+        "subtitle": "Commercial real estate | Los Angeles, CA",
+        "bullets": [
+          "Supported property financial statements and owner/investor reporting for a firm with a {{auxilium_portfolio}} portfolio; the figure describes employer assets, not assets personally managed."
+        ]
+      }
+    ],
+    "leadership": [
+      "Anre AI | Head of Finance and Project Manager since {{anre_started}}. Lead a {{reqest_team}}-person cross-functional Reqest project team, including {{reqest_engineers}} engineers ({{reqest_team:date}} account).",
+      "CalSol | Business and Operations, corporate relations and fundraising since {{calsol_bizops_since}}; electrical team, {{calsol_electrical}}."
+    ],
+    "skills": "Customer discovery; targeting and outreach copy; positioning; workflow design; API imports; AI-assisted product delivery; Excel."
+  },
+  {
+    "name": "Product",
+    "focus": "Product / Associate Product Manager",
+    "summary": "Product discovery, specifications and AI-assisted delivery. Founder of two live products; experience defining workflow rules, coordinating collaborators and checking complete user journeys.",
+    "experience": [
+      {
+        "title": "Founder, Reqest",
+        "dates": "{{reqest_started}} - Present",
+        "subtitle": "Student-organization spending requests, approvals and budgets | reqest.app",
+        "bullets": [
+          "Founded the product and built its first version with AI coding agents through {{reqest_solo_through}}; now coordinate requirements and delivery with a technical co-founder.",
+          "Translated a reported sign-in failure into a one-submit password-login requirement, email-code recovery and preservation of existing accounts. The technical co-founder approved the plan; AI agents implemented the merged change.",
+          "Directed specification and delivery of receipt-backed reimbursement amount checks: reject mismatched payments and require renewed approval after a legitimate amount change. Acceptance criteria tie the business rule to tests.",
+          "Booked {{reqest_calls}} external discovery calls through cold email ({{reqest_calls:date}}). CalSol has submitted real purchase requests (my account, {{reqest_usage:date}}; no measured count). I also work on CalSol’s business side."
+        ]
+      },
+      {
+        "title": "Founder, ReLease",
+        "dates": "{{release_started}} - Present",
+        "subtitle": "Berkeley rental research and review platform | joinrelease.com",
+        "bullets": [
+          "Own positioning, outreach and the product as sole founder/operator; built the live platform with AI coding tools.",
+          "Designed the email-verification and human-moderation workflow; checked production evidence before reporting results and removed test-data contamination from acquisition reporting."
+        ]
+      },
+      {
+        "title": "Creator, Outreach CRM",
+        "dates": "{{crm_started}} - Present",
+        "subtitle": "Shared relationship ownership and follow-up workflow",
+        "bullets": [
+          "Chose a standalone build after a local CRM trial failed {{crm_checks}} collaboration checks: exclusive ownership, stale-edit rejection and immutable draft history.",
+          "Directed the AI-assisted build. Recorded API import: {{crm_teams}} teams and {{crm_contacts}} contacts, {{crm_errors}} errors ({{crm_teams:date}}, prior import-verification record). These are imported records, not customers or sales."
+        ]
+      },
+      {
+        "title": "Operations Intern, Auxilium Aliis",
+        "dates": "{{auxilium_dates}}",
+        "subtitle": "Commercial real estate | Los Angeles, CA",
+        "bullets": [
+          "Supported property financial statements and owner/investor reporting for a firm with a {{auxilium_portfolio}} portfolio; the figure describes employer assets, not assets personally managed."
+        ]
+      }
+    ],
+    "leadership": [
+      "Anre AI | Head of Finance and Project Manager since {{anre_started}}. Lead a {{reqest_team}}-person cross-functional Reqest project team, including {{reqest_engineers}} engineers ({{reqest_team:date}} account).",
+      "CalSol | Business and Operations, corporate relations and fundraising since {{calsol_bizops_since}}; electrical team, {{calsol_electrical}}."
+    ],
+    "skills": "Discovery; product specifications; acceptance criteria; prioritization; workflow and data modeling; API imports; AI coding tools; Excel."
+  }
+]

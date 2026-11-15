@@ -11,6 +11,7 @@ import re
 import sys
 from datetime import date
 from pathlib import Path
+from urllib.parse import urlsplit
 
 ROOT = Path(__file__).parent
 DRAFTS = ROOT / "drafts"  # local only, listed in .gitignore
@@ -46,7 +47,51 @@ def fill(text, where):
 
 
 def inline(text, where):
-    return LINK.sub(r'<a href="\2">\1</a>', html.escape(fill(text, where), quote=False))
+    text = fill(text, where)
+    parts, start = [], 0
+    for match in LINK.finditer(text):
+        parts.append(html.escape(text[start:match.start()]))
+        parts.append(f'<a href="{safe_url(match.group(2), where)}">{html.escape(match.group(1))}</a>')
+        start = match.end()
+    parts.append(html.escape(text[start:]))
+    return ''.join(parts)
+
+
+def safe_url(value, where, local=False):
+    parsed = urlsplit(value)
+    if parsed.scheme not in ('', 'https', 'mailto') or parsed.netloc and not parsed.scheme:
+        problems.append(f'{where}: unsupported URL {value}')
+        return '#'
+    if local and (parsed.scheme or parsed.netloc or not value.startswith('assets/')):
+        problems.append(f'{where}: figures must use a local assets/ file')
+        return '#'
+    return html.escape(value, quote=True)
+
+
+def exhibit(kind, data, where):
+    if kind == 'links':
+        return '<div class="actions">' + ''.join(
+            f'<a href="{safe_url(fill(a["url"], where), where)}">{inline(a["label"], where)}</a>' for a in data
+        ) + '</div>'
+    caption = inline(data['caption'], where)
+    title = f'<figcaption>{caption}</figcaption>'
+    if kind == 'quote':
+        return f'<figure class="excerpt"><blockquote><p>{inline(data["text"], where)}</p></blockquote>{title}</figure>'
+    if kind == 'image':
+        src = safe_url(data['src'], where, local=True)
+        if not (ROOT / data['src']).is_file():
+            problems.append(f'{where}: missing image {data["src"]}')
+        alt = html.escape(fill(data['alt'], where), quote=True)
+        if not alt.strip() or data['width'] <= 0 or data['height'] <= 0:
+            problems.append(f'{where}: figure requires alt text and positive dimensions')
+        return (f'<figure class="screenshot"><a href="{src}" aria-label="Open full-size image: {alt}">'
+                f'<img src="{src}" alt="{alt}" width="{int(data["width"])}" height="{int(data["height"])}" '
+                f'loading="lazy" decoding="async"></a>{title}</figure>')
+    if kind == 'table':
+        header = ''.join(f'<th scope="col">{inline(c, where)}</th>' for c in data['headers'])
+        rows = ''.join('<tr>' + ''.join(f'<td>{inline(c, where)}</td>' for c in row) + '</tr>' for row in data['rows'])
+        return f'<figure class="data"><table><caption>{caption}</caption><thead><tr>{header}</tr></thead><tbody>{rows}</tbody></table></figure>'
+    raise ValueError(f'{where}: unknown exhibit @{kind}')
 
 
 def render(body, where):
@@ -64,7 +109,11 @@ def render(body, where):
     for line in body.splitlines():
         s = line.strip()
         numbered = re.match(r"\d+\. (.*)", s)
-        if numbered or s.startswith("- "):
+        if s.startswith('@'):
+            close()
+            kind, _, payload = s[1:].partition(' ')
+            out.append(exhibit(kind, json.loads(payload), where))
+        elif numbered or s.startswith("- "):
             tag = "ol" if numbered else "ul"
             if open_list != tag:
                 close()
@@ -73,7 +122,12 @@ def render(body, where):
             out.append(f"<li>{inline(numbered.group(1) if numbered else s[2:], where)}</li>")
         elif s.startswith("## "):
             close()
-            out.append(("</section>" if in_section else "") + f"<section><h2>{inline(s[3:], where)}</h2>")
+            heading = s[3:]
+            anchor = re.search(r' \{#([a-z][a-z0-9-]*)\}$', heading)
+            section_id = f' id="{anchor[1]}"' if anchor else ''
+            if anchor:
+                heading = heading[:anchor.start()]
+            out.append(("</section>" if in_section else "") + f"<section{section_id}><h2>{inline(heading, where)}</h2>")
             in_section = True
         elif s.startswith("# "):
             close()
@@ -102,7 +156,20 @@ def build(src, out_dir, draft):
     up = "../" if draft else ""
 
     # Numbers belong in facts.json: no digit may be typed straight into the words.
-    words_only = re.sub(r"(?m)^\d+\. ", "", LINK.sub(r"\1", TOKEN.sub("", head + body)))
+    # Exhibit dimensions and asset filenames are implementation data, not claims.
+    prose = re.sub(r'(?m)^@.*$', '', head + body)
+    for line in body.splitlines():
+        if line.startswith('@'):
+            kind, _, payload = line[1:].partition(' ')
+            data = json.loads(payload)
+            if kind == 'links':
+                prose += '\n' + ' '.join(a['label'] for a in data)
+            else:
+                prose += '\n' + data['caption']
+                prose += '\n' + data.get('text', '') + data.get('alt', '')
+                if kind == 'table':
+                    prose += '\n' + ' '.join(data['headers']) + ' '.join(c for row in data['rows'] for c in row)
+    words_only = re.sub(r"(?m)^\d+\. ", "", LINK.sub(r"\1", TOKEN.sub("", prose)))
     for loose in re.findall(r"\S*\d\S*", words_only):
         problems.append(f"{where}: '{loose}' is typed in the text. Move the number to facts.json")
 
@@ -112,7 +179,7 @@ def build(src, out_dir, draft):
     if count > MAX_WORDS:
         problems.append(f"{where}: {count} words, the limit is {MAX_WORDS}")
 
-    title = html.escape(meta["title"] if slug == "index" else f"{meta['title']} · Mathew Godinez")
+    title = html.escape(fill(meta["title"] if slug == "index" else f"{meta['title']} · Mathew Godinez", where))
     description = html.escape(fill(meta.get("description", ""), where))
     url = SITE if slug == "index" else f"{SITE}{slug}.html"
     nav = "\n".join(
@@ -130,17 +197,22 @@ def build(src, out_dir, draft):
 <meta property="og:title" content="{title}">
 <meta property="og:description" content="{description}">
 <meta property="og:url" content="{url}">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="{SITE}assets/social-preview.png">
+<meta property="og:image:alt" content="Mathew Godinez. Growth and go-to-market. ReLease, outreach workflows, and Reqest.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="{url}">
+<link rel="icon" href="{up}assets/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="{up}style.css">
 </head>
 <body class="{slug}">
+<a class="skip" href="#main">Skip to content</a>
 <header>
 <a class="name" href="{up}index.html">Mathew Godinez</a>
 <nav aria-label="Pages">
 {nav}
 </nav>
 </header>
-<main>
+<main id="main">
 {banner}{main}
 </main>
 </body>
@@ -155,18 +227,21 @@ def build(src, out_dir, draft):
     return count
 
 
-for src in sorted((ROOT / "content").glob("*.txt")):
-    print(f"built {src.stem:<10} {build(src, ROOT, draft=False)} words")
-for src in sorted((DRAFTS / "content").glob("*.txt")):
-    print(f"built draft {src.stem} ({build(src, DRAFTS, draft=True)} words, local only)")
-
-# facts.json is public too, so it gets the same check as the pages.
-check_do_not_say((ROOT / "facts.json").read_text(), "facts.json")
-if not BANNED:
-    print("Note: drafts/do-not-say.txt is missing, so the do-not-say check was skipped.")
-
-if problems:
-    print(f"\n{len(problems)} problem(s). Do not publish yet:")
-    print("\n".join(f"  - {p}" for p in problems))
-    sys.exit(1)
-print("\nAll checks passed.")
+if __name__ == '__main__':
+    for name, entry in FACTS.items():
+        if name.startswith('_'):
+            continue
+        if not entry.get('ledger') or not entry.get('measured'):
+            problems.append(f'facts.json: {name} needs a ledger source and evidence date')
+    for src in sorted((ROOT / "content").glob("*.txt")):
+        print(f"built {src.stem:<10} {build(src, ROOT, draft=False)} words")
+    for src in sorted((DRAFTS / "content").glob("*.txt")):
+        print(f"built draft {src.stem} ({build(src, DRAFTS, draft=True)} words, local only)")
+    check_do_not_say((ROOT / "facts.json").read_text(), "facts.json")
+    if not BANNED:
+        print("Note: drafts/do-not-say.txt is missing, so the do-not-say check was skipped.")
+    if problems:
+        print(f"\n{len(problems)} problem(s). Do not publish yet:")
+        print("\n".join(f"  - {p}" for p in problems))
+        sys.exit(1)
+    print("\nAll checks passed.")

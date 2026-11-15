@@ -3,16 +3,21 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ReLease · Mathew Godinez</title>
-<meta name="description" content="Case study. ReLease, a two-sided review marketplace built and launched solo by Mathew Godinez.">
+<title>ReLease · Outreach and measurement · Mathew Godinez</title>
+<meta name="description" content="How Mathew Godinez targeted a first warm-DM outreach batch for ReLease. Prepared message excerpt and a dated, small-sample funnel.">
 <meta property="og:type" content="website">
-<meta property="og:title" content="ReLease · Mathew Godinez">
-<meta property="og:description" content="Case study. ReLease, a two-sided review marketplace built and launched solo by Mathew Godinez.">
+<meta property="og:title" content="ReLease · Outreach and measurement · Mathew Godinez">
+<meta property="og:description" content="How Mathew Godinez targeted a first warm-DM outreach batch for ReLease. Prepared message excerpt and a dated, small-sample funnel.">
 <meta property="og:url" content="https://matthewgodinez24-boop.github.io/release.html">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="https://matthewgodinez24-boop.github.io/assets/social-preview.png">
+<meta property="og:image:alt" content="Mathew Godinez. Growth and go-to-market. ReLease, outreach workflows, and Reqest.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://matthewgodinez24-boop.github.io/release.html">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="style.css">
 </head>
 <body class="release">
+<a class="skip" href="#main">Skip to content</a>
 <header>
 <a class="name" href="index.html">Mathew Godinez</a>
 <nav aria-label="Pages">
@@ -21,34 +26,23 @@
 <a href="about.html">About</a>
 </nav>
 </header>
-<main>
-<h1>A live review marketplace, built and launched solo. First outreach batch: 6 sent, 3 replied, 2 posted (as of Jul 14, 2026).</h1>
-<section><h2>What it is and my role</h2>
-<p>ReLease is a two-sided marketplace where verified renters review their landlords. It is live at <a href="https://joinrelease.com">joinrelease.com</a>.</p>
-<p>I am the sole founder and operator. I built and launched it solo, end to end. Nobody else worked on it.</p>
-</section><section><h2>The problem</h2>
-<p>A review marketplace launches with zero supply. The incumbent, och.berkeley.edu, is operated by CoStar and cannot carry reviews.</p>
-</section><section><h2>What I did</h2>
-<ol>
-<li>Ran a competitive teardown of CoStar's och.berkeley.edu and found it cannot carry reviews.</li>
-<li>Built and launched the product: an address directory with reviews from renters who verify their email.</li>
-<li>Ran one outreach batch to seed reviews.</li>
-<li>Audited production read-only instead of trusting my own status document. The audit overturned an earlier all-clear: ten 'reviews' were QA data and the takedown contact was unset, so I paused seeding until both were fixed.</li>
-<li>Diagnosed a 17-signup surge in three days as form spam (dot-injected Gmail addresses, out-of-state ISPs) instead of reporting it as growth, and shipped double opt-in. (My own account as of Sep 19, 2026, not re-measured.)</li>
-<li>Priced, then killed, my own recommendation (LRS certification, parked three weeks after I proposed it), and rejected my own idea of memes as a format on evidence.</li>
-</ol>
-</section><section><h2>Results</h2>
-<ul>
-<li>27,657 addresses and 27 landlords on file (as of Nov 11, 2026).</li>
-<li>Email verification completion: 12 of 12 (as of Jul 25, 2026).</li>
-<li>Outreach: 6 sent, 3 replied, 2 posted, from one batch (as of Jul 14, 2026).</li>
-</ul>
-</section><section><h2>What went wrong</h2>
-<p>ReLease is live, but I under-invested in distribution and over-invested in the build. What I would do differently is set the supply target before the build target, not after.</p>
-</section><section><h2>Links</h2>
-<ul>
-<li>Live product: <a href="https://joinrelease.com">joinrelease.com</a></li>
-</ul>
+<main id="main">
+<h1>ReLease: testing the first outreach</h1>
+<p>6 warm DMs sent. 3 replies. 2 marked posted. One batch, Jul 14, 2026.</p>
+<p>Sole founder and operator · Positioning, outreach and AI-assisted product building.</p>
+<p>ReLease helps Berkeley renters research a home before signing: public housing records plus reviews from renters who verify their email. <a href="https://joinrelease.com">Visit ReLease</a>.</p>
+<section><h2>The audience and the ask</h2>
+<p>A new review marketplace needs useful coverage before renters have a reason to return. I concentrated outreach around a specific property manager, asking renters in my warm network to describe their experience. The first logged batch targeted Premium Properties.</p>
+<p>The outreach kit calls for a direct link to the renter’s building or manager. The goal is a relevant review on that page, not an undirected homepage visit.</p>
+</section><section><h2>Inspect the message</h2>
+<figure class="excerpt"><blockquote><p>…Trying to make it useful before fall housing. You rented from [manager]. Would you say what happened? About a minute, and it&#x27;s the thing the next tenant reads before they sign. Here&#x27;s the page for [building/manager]: [deep link].…</p></blockquote><figcaption>Excerpt from my prepared warm-DM template. This is not a recovered sent message; retired verification wording is omitted. <a href="assets/work/release-outreach.txt">Source note (TXT)</a>.</figcaption></figure>
+</section><section><h2>What the batch recorded</h2>
+<figure class="data"><table><caption>Original outreach log, Jul 14, 2026. Warm DM, Premium. Denominator: 6 messages.</caption><thead><tr><th scope="col">Sent</th><th scope="col">Replied</th><th scope="col">Marked posted</th></tr></thead><tbody><tr><td>6</td><td>3</td><td>2</td></tr></tbody></table></figure>
+<p>“Posted” is the tracker’s review-posting status; I have not matched those entries to individual approved reviews. This small historical batch does not establish repeatable acquisition. <a href="assets/work/release-batch.txt">Original log transcription (TXT)</a>.</p>
+</section><section><h2>What changed after the test</h2>
+<p>I kept distribution focused on renter networks and individual building pages. I also separated product QA and spam from acquisition reporting: a production check prompted a pause to remove test reviews, and a later signup-spam diagnosis led to double opt-in.</p>
+<p>Next measurement: retain the sent wording and connect outreach records to approved reviews, so the full path can be checked. No current total-review claim is made here.</p>
+<p><a href="mailto:matthewgodinez24@gmail.com">Email me about growth/GTM work</a> · <a href="reqest.html#outreach-workflow">Next: outreach workflow</a></p>
 </section>
 </main>
 </body>

@@ -1,0 +1,23 @@
+Outreach workflow | Build decision and evidence
+
+Mathew's role: chose requirements and directed AI-assisted implementation and review.
+
+Workflow
+Choose a relationship; claim ownership; inspect context/history; prepare and approve a draft; send manually outside the CRM; record what actually happened; set a next action. Exporting a Gmail draft is not a sent message. The application does not send outreach automatically.
+
+Build-versus-buy decision, October 8, 2026
+The local trial of self-hosted Twenty v2.45.6 passed workspace isolation, role-limited API and relevant contact/filter checks. The builder's report found three missing collaboration guarantees in the tested configuration:
+- Two simultaneous claims could both succeed, replacing ownership.
+- A stale edit could overwrite a colleague's newer change.
+- Saved draft revisions were editable rather than append-only.
+
+A workaround would require a custom write service and interface anyway, so Mathew chose a focused standalone app. This is the result of that dated trial, not a universal claim about Twenty or its current hosted product. Source: foundation-trial-twenty.md.
+
+Recorded import, October 9, 2026
+23 teams, 41 contacts, 29 emails, 40 notes and 23 next actions; zero reported errors; three-club spot check. Source: the import verification recorded in Mathew's resume master and CRM build log. The import was not rerun for this portfolio. These are operational records, not new customers, sales, meetings or revenue.
+
+Interface exhibit
+outreach-crm.png is an unchanged application screenshot from the October 11 test run, originally reqest-list-replied-390-dark.png. All shown organizations and people are explicitly fictional. It exposes owner, status, next action and latest activity. Missing next actions remain visible; the picture does not establish active customer adoption.
+
+What to improve next
+The October 17 product research identified friction in logging an interaction and setting the next action. The next work should make that real operator workflow easier and measure repeated use. No adoption or efficiency lift is claimed here.

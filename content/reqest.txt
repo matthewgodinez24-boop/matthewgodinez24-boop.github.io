@@ -1,30 +1,31 @@
-title: Reqest
-description: Case study. Reqest go-to-market research by Mathew Godinez, founder.
+title: Reqest · Discovery, delivery and GTM systems
+description: Reqest customer discovery, an inspectable product specification and the outreach CRM. Mathew Godinez’s role, collaborators and dated usage evidence.
 ---
-# {{reqest_calls}} discovery calls with out-of-network student organizations, booked by cold email (as of {{reqest_calls:date}})
+# Reqest: discovery and delivery
 
-## What it is and my role
-Reqest handles spending requests, approvals and budgets for student organizations. It is deployed at [reqest.app](https://reqest.app).
+Spending requests, approvals and budgets for student organizations. [Explore Reqest](https://reqest.app) · [Browse the fictional demo](https://reqest.app/demo).
 
-I am the founder. I founded Reqest and built the first version solo through {{reqest_solo_through}}. A technical co-founder joined in {{reqest_cofounder_joined}}.
+Founder · Discovery, requirements and AI-assisted delivery. I built the first version through {{reqest_solo_through}}; a technical co-founder joined in {{reqest_cofounder_joined}}. I lead a {{reqest_team}}-person Anre AI project team including {{reqest_engineers}} engineers ({{reqest_team:date}} account).
 
-## The problem
-I needed to hear from student organizations outside my own network, and to judge what I heard against criteria I could not adjust afterwards.
+## From conversations to product work
+I booked {{reqest_calls}} discovery calls through cold email, with Purdue Space Program and TAMU SRT ({{reqest_calls:date}}). That research and the delivery example below are separate evidence.
 
-## What I did
-1. Cold-emailed student organizations outside my network.
-2. Held {{reqest_calls}} discovery calls: Purdue Space Program and TAMU SRT.
-3. Wrote a go-to-market research report with pass/fail criteria registered before the results came in.
-4. Re-scored my own failing verdict against primary-source student-government minutes.
+Returning users also needed reliable access without repeatedly opening email. After a co-founder reported a sign-in failure, I specified password access with an email-code fallback, preserving existing accounts.
 
-The report and the re-score are my own account as of {{reqest_report:date}}, not re-measured.
+@quote {"text":"A returning user enters their email and password once and reaches the app. They should not need to open an email or re-enter their email on a confirmation screen.","caption":"My goal from the sign-in task, {{reqest_signin}}. [Requirements and delivery evidence (TXT)](assets/work/reqest-signin.txt)."}
 
-## Results
-- {{reqest_calls}} discovery calls held, both booked by cold email (as of {{reqest_calls:date}}).
-- Requests that have gone through the system: {{reqest_requests}} (as of {{reqest_requests:date}}).
+My technical co-founder approved the plan; AI agents implemented it, and the change merged. Local journey checks used a simulated authentication provider. Preview-hostname and real password-manager checks remained incomplete; no conversion lift was measured.
 
-## What went wrong
-My own research report returned a failing verdict against the criteria I set. As of {{reqest_requests:date}}, no request had gone through the system. I under-invested in distribution and over-invested in the build.
+[Second specification: approved versus paid amount (TXT)](assets/work/reqest-amount-rule.txt).
 
-## Links
-- Live product: [reqest.app](https://reqest.app)
+## Outreach workflow {#outreach-workflow}
+I built a shared CRM to keep relationship ownership, conversation history and next actions together. A local trial of an existing CRM failed {{crm_checks}} collaboration checks: exclusive ownership, stale-edit rejection and immutable draft history.
+
+@image {"src":"assets/work/outreach-crm.png","width":358,"height":1273,"alt":"Outreach CRM showing fictional relationships with owner, status, next action and last activity.","caption":"Detail of the actual interface, {{crm_capture}}; fictional test records. Notice that a reply with no next action stays visible. Open the image for full size."}
+
+Recorded import, {{crm_teams:date}}: {{crm_teams}} teams and {{crm_contacts}} contacts, {{crm_errors}} errors. These are imported records, not customers or sales. [Workflow, trial and import notes (TXT)](assets/work/outreach-workflow.txt).
+
+## Current usage
+{{reqest_usage}}. I also work on CalSol’s business side. This is my account as of {{reqest_usage:date}}, without a measured request count or outcome improvement.
+
+[Product resume (PDF)](assets/Mathew-Godinez-Product.pdf) · [Email me](mailto:{{public_email}})

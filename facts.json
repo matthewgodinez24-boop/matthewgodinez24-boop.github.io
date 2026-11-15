@@ -1,6 +1,5 @@
 {
-  "_about": "Every number and date on the site lives here, once. 'measured' is the date on its claim-ledger line. 'ledger' names the line. Pages use {{name}} for the value and {{name:date}} for the date.",
-
+  "_about": "Values and evidence dates reconciled against CLAIM_LEDGER.md on 2026-11-15. measured is the date of the source record, not necessarily an independent measurement; evidence distinguishes recorded results, attestations and examples.",
   "release_addresses": {
     "value": "27,657",
     "measured": "2026-11-11",
@@ -19,17 +18,20 @@
   "release_outreach_sent": {
     "value": "6",
     "measured": "2026-07-14",
-    "ledger": "ReLease, safe to say: outreach run to date, sent"
+    "ledger": "Current portfolio reconciliation 2026-11-15: ReLease first outreach; SEEDING_COCKPIT.xlsx Outreach log row 10, warm DM, Premium",
+    "evidence": "recorded batch; posted status not independently matched to review IDs"
   },
   "release_outreach_replied": {
     "value": "3",
     "measured": "2026-07-14",
-    "ledger": "ReLease, safe to say: outreach run to date, replied"
+    "ledger": "Current portfolio reconciliation 2026-11-15: ReLease first outreach; SEEDING_COCKPIT.xlsx Outreach log row 10, warm DM, Premium",
+    "evidence": "recorded batch; posted status not independently matched to review IDs"
   },
   "release_outreach_posted": {
     "value": "2",
     "measured": "2026-07-14",
-    "ledger": "ReLease, safe to say: outreach run to date, posted"
+    "ledger": "Current portfolio reconciliation 2026-11-15: ReLease first outreach; SEEDING_COCKPIT.xlsx Outreach log row 10, warm DM, Premium",
+    "evidence": "recorded batch; posted status not independently matched to review IDs"
   },
   "release_started": {
     "value": "June 2026",
@@ -41,7 +43,6 @@
     "measured": "2026-09-19",
     "ledger": "Mathew-attested additions 2026-09-19: signup surge diagnosed as form spam (attested, not re-measured)"
   },
-
   "reqest_calls": {
     "value": "2",
     "measured": "2026-07-30",
@@ -62,12 +63,6 @@
     "measured": "2026-09-09",
     "ledger": "Reqest, safe to say: founding"
   },
-  "reqest_requests": {
-    "value": "0",
-    "measured": "2026-09-09",
-    "ledger": "Reqest, safe to say: no request has gone through the system"
-  },
-
   "calsol_electrical": {
     "value": "January to September 2026",
     "measured": "2026-09-19",
@@ -83,10 +78,112 @@
     "measured": "2026-09-19",
     "ledger": "Mathew-attested additions 2026-09-19: Auxilium Aliis"
   },
-
   "available_from": {
     "value": "June 2027",
-    "measured": null,
-    "ledger": "Not a ledger line: from the portfolio plan, section 3"
+    "measured": "2026-10-26",
+    "ledger": "Current portfolio reconciliation: education and availability",
+    "evidence": "planned availability"
+  },
+  "graduation": {
+    "value": "May 2027",
+    "measured": "2026-10-26",
+    "ledger": "Current portfolio reconciliation: education and availability",
+    "evidence": "user-confirmed education"
+  },
+  "public_email": {
+    "value": "matthewgodinez24@gmail.com",
+    "measured": "2026-11-15",
+    "ledger": "Current portfolio reconciliation: public contact",
+    "evidence": "source-record"
+  },
+  "linkedin": {
+    "value": "https://www.linkedin.com/in/mathew-godinez/",
+    "measured": "2026-11-15",
+    "ledger": "Current portfolio reconciliation: public contact",
+    "evidence": "source-record"
+  },
+  "crm_teams": {
+    "value": "23",
+    "measured": "2026-10-09",
+    "ledger": "Current portfolio reconciliation: Outreach CRM import",
+    "evidence": "prior verified record, not rerun November 15"
+  },
+  "crm_contacts": {
+    "value": "41",
+    "measured": "2026-10-09",
+    "ledger": "Current portfolio reconciliation: Outreach CRM import",
+    "evidence": "prior verified record, not rerun November 15"
+  },
+  "crm_errors": {
+    "value": "0",
+    "measured": "2026-10-09",
+    "ledger": "Current portfolio reconciliation: Outreach CRM import",
+    "evidence": "prior verified record, not rerun November 15"
+  },
+  "crm_checks": {
+    "value": "three",
+    "measured": "2026-10-08",
+    "ledger": "Current portfolio reconciliation: Outreach CRM decision",
+    "evidence": "dated builder trial"
+  },
+  "crm_capture": {
+    "value": "October 11, 2026",
+    "measured": "2026-10-11",
+    "ledger": "Current portfolio reconciliation: Outreach CRM interface",
+    "evidence": "fictional test data"
+  },
+  "reqest_usage": {
+    "value": "CalSol has put real purchase requests through Reqest",
+    "measured": "2026-11-13",
+    "ledger": "Current portfolio reconciliation: Reqest usage",
+    "evidence": "Mathew-attested; no measured request count"
+  },
+  "reqest_team": {
+    "value": "six",
+    "measured": "2026-10-14",
+    "ledger": "Current portfolio reconciliation: Reqest team",
+    "evidence": "Mathew-attested"
+  },
+  "reqest_engineers": {
+    "value": "four",
+    "measured": "2026-10-14",
+    "ledger": "Current portfolio reconciliation: Reqest team",
+    "evidence": "Mathew-attested"
+  },
+  "reqest_signin": {
+    "value": "September 21, 2026",
+    "measured": "2026-09-21",
+    "ledger": "Current portfolio reconciliation: Reqest feedback-to-delivery exhibit",
+    "evidence": "historical build and merge record; no measured conversion lift"
+  },
+  "reqest_amount_rule": {
+    "value": "September 8, 2026",
+    "measured": "2026-09-08",
+    "ledger": "Current portfolio reconciliation: Reqest delivery exhibit",
+    "evidence": "historical merged specification"
+  },
+  "auxilium_dates": {
+    "value": "June\u2013December 2024",
+    "measured": "2026-11-15",
+    "ledger": "Current portfolio reconciliation: Auxilium Aliis",
+    "evidence": "source-record"
+  },
+  "anre_started": {
+    "value": "August 2026",
+    "measured": "2026-10-01",
+    "ledger": "Current portfolio reconciliation: Anre AI",
+    "evidence": "Mathew-attested"
+  },
+  "reqest_started": {
+    "value": "July 2026",
+    "measured": "2026-09-19",
+    "ledger": "Mathew-attested additions: start months",
+    "evidence": "Mathew-attested"
+  },
+  "crm_started": {
+    "value": "October 2026",
+    "measured": "2026-10-14",
+    "ledger": "Current portfolio reconciliation: Outreach CRM decision",
+    "evidence": "source-record"
   }
 }

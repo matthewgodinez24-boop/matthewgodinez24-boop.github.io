@@ -1,0 +1,16 @@
+ReLease | Warm-network outreach template excerpt
+
+Prepared copy, not a recovered sent message.
+Source: OUTREACH_KIT.md, section 2, Warm network; July 2026 version.
+Inspected November 15, 2026.
+
+Original excerpt (ellipses identify omissions):
+
+“…Trying to make it useful before fall housing. You rented from [manager]. Would you say what happened? About a minute, and it's the thing the next tenant reads before they sign. Here's the page for [building/manager]: [deep link].…”
+
+The bracketed fields are template placeholders, not redacted real recipients.
+Opening positioning and closing verification language are omitted because they no longer describe the product accurately. The excerpt preserves the wording of the retained passage, including its approximate time claim; completion time was not measured here.
+
+The kit instructs the sender to personalize each message and deep-link to the specific landlord or building. This demonstrates the targeting and copy prepared for outreach. It does not prove this exact wording was sent in the July 14 batch.
+
+Contribution: Mathew was the sole founder/operator and directed the positioning, outreach and AI-assisted build. No authorship claim about every word being written without AI is implied.

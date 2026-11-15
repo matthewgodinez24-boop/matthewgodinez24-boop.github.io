@@ -1,0 +1,20 @@
+ReLease | First logged outreach batch
+
+Source: SEEDING_COCKPIT.xlsx, “Outreach log”, row 10, cells A10:G10.
+Original workbook inspected November 15, 2026.
+This is a text transcription, not a new experiment or current traction count.
+
+Date: 2026-07-14
+Channel: Warm DM
+Message type: Warm DM (Premium)
+Sent: 6
+Replied: 3
+Posted: 2
+Notes: first blitz, landlord #1
+
+Denominator: six sent messages in one batch.
+“Posted” is the workbook's recorded review-posting status. No per-recipient send record or link to approved review IDs was recovered, so these two entries are not independently verified approved reviews.
+
+Targeting: warm-network renters connected to Premium Properties. The workbook’s Contacts tab explicitly labels its lone populated contact row as an example; that contact is excluded. The outreach log above is a separate, dated batch row.
+
+The earlier resume description “cold outreach to property managers” is not supported by this source and has been corrected. Do not extrapolate a reliable response rate from this sample or treat it as current acquisition performance.

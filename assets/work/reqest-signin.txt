@@ -1,0 +1,23 @@
+Reqest | Returning-user sign-in: problem, decision, requirements, delivery
+
+Source: T-055-streamlined-signin.md, goal, acceptance checks and September 21, 2026 build record; merged PR 137, commit be2b98f. Inspected from repository main on November 15, 2026.
+
+Problem evidence
+The task records a co-founder-reported sign-in failure. This is firsthand product testing, not a quote from either external discovery call. Local stale-session logs were evidence, not a proven explanation of that particular failure.
+
+Mathew's goal (verbatim excerpt)
+“A returning user enters their email and password once and reaches the app. They should not need to open an email or re-enter their email on a confirmation screen.”
+
+Decision
+Support password login while retaining same-page email-code access and recovery. Replacing passwordless users' accounts or requiring a second account was rejected: identity, memberships, roles and request history must survive.
+
+Acceptance criteria (condensed from D-1, D-3 and D-4)
+- A verified returning user submits email/password once and reaches their existing organization landing page.
+- Email-code access collects the address once and provides resend/change-email controls; invalid, expired, used or mismatched codes cannot authenticate.
+- An existing passwordless user can sign in by code, set a password and return using that password with the same user identity, memberships, roles and request history.
+
+Contribution and delivery
+Mathew supplied the goal and directed the task. Codex prepared the plan; the technical co-founder approved it; Claude Code implemented the change. It merged as PR 137 under Mathew’s GitHub account. This is not a claim that Mathew manually wrote all the code or designed the co-founder's marketing page.
+
+Validation boundary
+The build record describes local browser journeys against a simulated authentication provider. The task did not complete its preview-hostname or real password-manager checks. No live-provider behavior, conversion improvement or measured reduction in support requests is established by this exhibit.
