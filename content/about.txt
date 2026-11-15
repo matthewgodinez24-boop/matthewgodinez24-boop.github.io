@@ -1,0 +1,18 @@
+title: About
+description: About Mathew Godinez, founder of ReLease and Reqest.
+---
+# About
+
+I'm Mathew Godinez, founder of [ReLease](release.html) and [Reqest](reqest.html).
+
+Available {{available_from}}, remote or Europe-based roles.
+
+## CalSol
+- Electrical team, {{calsol_electrical}}.
+- Business and Operations team (corporate relations and fundraising), since {{calsol_bizops_since}}.
+
+## Auxilium Aliis
+{{auxilium_portfolio}} commercial real estate portfolio.
+
+## Find me
+[LinkedIn](https://www.linkedin.com/in/mathew-godinez-3935731b0)

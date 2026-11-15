@@ -1,0 +1,4 @@
+# Unpublished pages and private notes. Never committed, never pushed.
+drafts/
+.DS_Store
+__pycache__/

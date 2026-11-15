@@ -1,0 +1,30 @@
+title: Reqest
+description: Case study. Reqest go-to-market research by Mathew Godinez, founder.
+---
+# {{reqest_calls}} discovery calls with out-of-network student organizations, booked by cold email (as of {{reqest_calls:date}})
+
+## What it is and my role
+Reqest handles spending requests, approvals and budgets for student organizations. It is deployed at [reqest.app](https://reqest.app).
+
+I am the founder. I founded Reqest and built the first version solo through {{reqest_solo_through}}. A technical co-founder joined in {{reqest_cofounder_joined}}.
+
+## The problem
+I needed to hear from student organizations outside my own network, and to judge what I heard against criteria I could not adjust afterwards.
+
+## What I did
+1. Cold-emailed student organizations outside my network.
+2. Held {{reqest_calls}} discovery calls: Purdue Space Program and TAMU SRT.
+3. Wrote a go-to-market research report with pass/fail criteria registered before the results came in.
+4. Re-scored my own failing verdict against primary-source student-government minutes.
+
+The report and the re-score are my own account as of {{reqest_report:date}}, not re-measured.
+
+## Results
+- {{reqest_calls}} discovery calls held, both booked by cold email (as of {{reqest_calls:date}}).
+- Requests that have gone through the system: {{reqest_requests}} (as of {{reqest_requests:date}}).
+
+## What went wrong
+My own research report returned a failing verdict against the criteria I set. As of {{reqest_requests:date}}, no request had gone through the system. I under-invested in distribution and over-invested in the build. What I would do differently is set the supply target before the build target, not after.
+
+## Links
+- Live product: [reqest.app](https://reqest.app)

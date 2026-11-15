@@ -1,0 +1,87 @@
+{
+  "_about": "Every number and date on the site lives here, once. 'measured' is the date on its claim-ledger line. 'ledger' names the line. Pages use {{name}} for the value and {{name:date}} for the date.",
+
+  "release_addresses": {
+    "value": "27,657",
+    "measured": "2026-11-11",
+    "ledger": "Live check 2026-11-11, ReLease homepage: addresses on file"
+  },
+  "release_landlords": {
+    "value": "27",
+    "measured": "2026-11-11",
+    "ledger": "Live check 2026-11-11, ReLease homepage: landlords"
+  },
+  "release_verify": {
+    "value": "12 of 12",
+    "measured": "2026-07-25",
+    "ledger": "ReLease, safe to say: email verification completion (event log)"
+  },
+  "release_outreach_sent": {
+    "value": "6",
+    "measured": "2026-07-14",
+    "ledger": "ReLease, safe to say: outreach run to date, sent"
+  },
+  "release_outreach_replied": {
+    "value": "3",
+    "measured": "2026-07-14",
+    "ledger": "ReLease, safe to say: outreach run to date, replied"
+  },
+  "release_outreach_posted": {
+    "value": "2",
+    "measured": "2026-07-14",
+    "ledger": "ReLease, safe to say: outreach run to date, posted"
+  },
+  "release_spam_signups": {
+    "value": "17",
+    "measured": "2026-09-19",
+    "ledger": "Mathew-attested additions 2026-09-19: signup surge diagnosed as form spam (attested, not re-measured)"
+  },
+
+  "reqest_calls": {
+    "value": "2",
+    "measured": "2026-07-30",
+    "ledger": "Reqest, safe to say: discovery calls held (call prep docs)"
+  },
+  "reqest_report": {
+    "value": "one",
+    "measured": "2026-09-19",
+    "ledger": "Mathew-attested additions 2026-09-19: Reqest go-to-market research report (attested, not re-measured)"
+  },
+  "reqest_solo_through": {
+    "value": "August 2026",
+    "measured": "2026-09-09",
+    "ledger": "Reqest, safe to say: founding"
+  },
+  "reqest_cofounder_joined": {
+    "value": "September 2026",
+    "measured": "2026-09-09",
+    "ledger": "Reqest, safe to say: founding"
+  },
+  "reqest_requests": {
+    "value": "0",
+    "measured": "2026-09-09",
+    "ledger": "Reqest, safe to say: no request has gone through the system"
+  },
+
+  "calsol_electrical": {
+    "value": "January to September 2026",
+    "measured": "2026-09-19",
+    "ledger": "Mathew-attested additions 2026-09-19: CalSol"
+  },
+  "calsol_bizops_since": {
+    "value": "September 2026",
+    "measured": "2026-09-19",
+    "ledger": "Mathew-attested additions 2026-09-19: CalSol"
+  },
+  "auxilium_portfolio": {
+    "value": "$60M+",
+    "measured": "2026-09-19",
+    "ledger": "Mathew-attested additions 2026-09-19: Auxilium Aliis"
+  },
+
+  "available_from": {
+    "value": "June 2027",
+    "measured": null,
+    "ledger": "Not a ledger line: from the portfolio plan, section 3"
+  }
+}
